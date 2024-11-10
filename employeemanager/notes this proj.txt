@@ -1,0 +1,27 @@
+To start mysql server first download it 
+Then need to run brew services start mysql
+Then we can see in brew services list
+
+Then the mysql will start and we can do something like "show databases;" to see what's currently running
+
+The server can also be managed thru the activity monitor if we need to shut it down 
+
+
+    if [ -f "/Users/yaser/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/yaser/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/yaser/anaconda3/bin:$PATH"
+    fiexpot
+
+
+Make sure mysql server is running and you are able to login with the designated password
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'letmein';
+
+^this sql commands helps to ensure the password is the one we set like letmein
+
+Need to use brew to see service : brew services list
+
+Brew services start mysql to start
+
+mysql -u root -p     to hop into the mysql command line for the sql server made with the letmein pw
+
